@@ -1,3 +1,4 @@
+// @ts-nocheck
 class StackClass {
     constructor() {
         this.items = [];
@@ -8,12 +9,12 @@ class StackClass {
      /**
      * @param {any} item
      */
-    async add(item) {
+    async push(item) {
         this.items.push(item);
         this.top++;
     }
     // Pop Item from stack
-    async remove() {
+    async pop() {
         this.items.pop();
         --this.top;
     }
@@ -22,14 +23,17 @@ class StackClass {
         return this.items[this.top-1]
     }
     // clear stack
-    async clearStack() {
+    async empty() {
         this.items = [];
         this.top = 0;
         return true;
     }
     // Length of stack
-    async lengthStack() {
+    async length() {
         return this.top;
+    }
+    async search(searchItem) {
+        return this.items.includes(searchItem) || false;
     }
 }
 

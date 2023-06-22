@@ -14,7 +14,7 @@ describe('Check all queue methods', async () => {
         expect(await myQueue.peek()).equals('item');
         expect(await myQueue.element()).equals('item');
     }).timeout(-1);
-     // Remove item to queue
+     // Remove item from queue
      it('check for remove from queue', async () => {
         await myQueue.remove();
         expect(await myQueue.fetch()).deep.equals(['item2', 'item3']);
