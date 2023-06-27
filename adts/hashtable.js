@@ -55,21 +55,22 @@ class HashTableClass {
     // Private Methods End here
     // Put data into a hash table
     /**
-     * @param {any} data
+     * * @param {any} key
+     * @param {any} value
      */
-    async put(data) {
+    async put(key, value) {
         let pos;
-        const dataType = typeof(data);
+        const dataType = typeof(key);
         if( dataType === 'number' ) {
             pos = await this.#numHash();
         } else {
             if (this.algo === 'better') {
-                pos = await this.#betterHash(data);
+                pos = await this.#betterHash(key);
             } else {
-                pos = await this.#simpleHash(data);
+                pos = await this.#simpleHash(key);
             }
         }
-        this.table[pos]= data;
+        this.table[pos]= value;
     }
     // Fetch Distro of Data
     /**
@@ -84,31 +85,39 @@ class HashTableClass {
         }
         return dataObj;
     }
-    // Fetch a single data if exists or not
+    // Fetch position of key if exists or not
     /**
-     * @param {any} data
+     * @param {any} key
      * @returns {Promise<number>}
      */
-    async hashValue(data) {
+    async hashValue(key) {
         let pos;
-        const dataType = typeof(data);
+        const dataType = typeof(key);
         if( dataType === 'number' ) {
             pos = await this.#numHash();
         } else {
             if (this.algo === 'better') {
-                pos = await this.#betterHash(data);
+                pos = await this.#betterHash(key);
             } else {
-                pos = await this.#simpleHash(data);
+                pos = await this.#simpleHash(key);
             }
         }
         return pos;  
     }
+    /**
+     * @param {any} key
+     * @returns {Promise<any>}
+     */
+    async get(key) {
+        const pos = await this.hashValue(key);
+        return this.table[pos];
+    }
     // Remove Data from the hash table
     /**
-     * @param {any} data
+     * @param {any} key
      */
-    async remove(data) {
-        let hashPos = await this.hashValue(data);
+    async remove(key) {
+        let hashPos = await this.hashValue(key);
         if(!!this.table[hashPos]) {
             this.table[hashPos] = undefined;
         }
