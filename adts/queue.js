@@ -4,13 +4,13 @@ class QueueClass {
     };
 
     // enqueue items
-    async add(data) {
+    async enqueue(data) {
         this.queueItems.push(data);
         return true;
     }
 
     // dequeue items
-    async remove() {
+    async dequeue() {
         this.queueItems.shift();
         return true;
     }
