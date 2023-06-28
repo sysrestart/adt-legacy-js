@@ -44,6 +44,7 @@ class LListClass {
     }
     // Find Previous Item in a linked list.
     async findPrevious(item) {
+        await this.find(item);
         var currNode = this.head;
         while(!(currNode.next === null) && currNode.next.element !== item) {
             currNode = currNode.next;
