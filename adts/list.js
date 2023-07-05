@@ -19,7 +19,7 @@ class ListClass {
         if(this.listSize > 0) {
             this.listItems.pop()
             this.listSize--;
-            return false;
+            return true;
         }
     }
     // current position in list
@@ -40,22 +40,28 @@ class ListClass {
     // move to front of list
     async front() {
         this.pos = 0;
+        return true;
     }
     // move to end of list
     async end() {
         this.pos = this.listSize-1;
+        return true;
     }
     // previous element
     async prev() {
         if(this.pos > 0) {
             --this.pos;
+            return true;
         }
+        return false;
     }
     // next element
     async next() {
         if(this.pos < this.listSize - 1) {
             ++this.pos;
+            return true;
         }
+        return false;
     }
     // Current position of element
     async currPos() {
@@ -65,7 +71,9 @@ class ListClass {
     async moveTo(position) {
         if(position >= 0 && position < this.listSize) {
             this.pos = position;
+            return true;
         }
+        return false;
     }
      // current item in list
      async getCurrElement() {

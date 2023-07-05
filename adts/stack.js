@@ -12,15 +12,21 @@ class StackClass {
     async push(item) {
         this.items.push(item);
         this.top++;
+        return true;
     }
     // Pop Item from stack
     async pop() {
         this.items.pop();
         --this.top;
+        return true;
     }
     // peek into stack
     async peek() {
         return this.items[this.top-1]
+    }
+    // fetch stack items
+    async fetch() {
+        return this.queueItems;
     }
     // clear stack
     async empty() {

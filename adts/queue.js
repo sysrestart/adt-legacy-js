@@ -24,6 +24,11 @@ class QueueClass {
     async peek() {
         return this.queueItems[0];
     }
+    // clear stack
+    async empty() {
+        this.queueItems = [];
+        return true;
+    }
     // poll into the queue remove the head and return items
     async poll() {
         const pollData = [...this.queueItems];
@@ -34,7 +39,7 @@ class QueueClass {
             return null;
         }
     }
-    // Fetch element throw error if it is null
+    // Fetch element return false if queue is empty
     async element() {
         if(this.queueItems.length > 0) {
             return this.queueItems[0];

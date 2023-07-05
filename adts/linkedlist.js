@@ -27,6 +27,7 @@ class LListClass {
         var current = await this.find(item);
         newNode.next = current.next; 
         current.next = newNode;
+        return true;
     }
     // Display all the linkedlist node element and return an array of numbers
     /**
@@ -58,8 +59,9 @@ class LListClass {
         var previousEl = await this.findPrevious(item);
         if(!(previousEl.next === null)) {
             previousEl.next = previousEl.next.next;
+            return true;
         }
-        
+        return false;
     }
 
 
