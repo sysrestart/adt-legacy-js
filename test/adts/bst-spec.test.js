@@ -4,7 +4,7 @@ const BSTClass = require('../../adts/binarysearchtree');
 
 const myBST = new BSTClass();
 describe('BST methods check', async () => {
-    it.only('Insert and validate data', async () => {
+    it('Insert and validate data', async () => {
         await myBST.insert(32);
         await myBST.insert(44);
         await myBST.insert(47);

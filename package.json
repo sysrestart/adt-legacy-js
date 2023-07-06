@@ -22,15 +22,21 @@
   "license": "ISC",
   "dependencies": {
     "chai": "4.3.7",
-    "husky": "8.0.3",
-    "lint-staged": "13.2.2",
-    "mocha": "10.2.0",
-    "prettier-eslint": "15.0.1"
+    "mocha": "10.2.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.22.5",
     "eslint": "^8.43.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5"
-  }
+  },
+  "engines": {
+    "node": ">=16.0"
+  },
+  "files": [
+    "LICENSE",
+    "Readme.md",
+    "adts/index.js",
+    "adts/"
+  ]
 }
