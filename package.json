@@ -1,6 +1,6 @@
 {
   "name": "adt-legacy-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Faster way to implement Auxiliary Data Types",
   "author": "Sonu Kumar<sonu0774@gmail.com>",
   "license": "Apache 2.0",
@@ -24,14 +24,14 @@
     "test": "mocha --exit --extension .test.js --recursive"
   },
   "dependencies": {
-    "chai": "4.3.7",
-    "mocha": "10.2.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.22.5",
     "eslint": "^8.43.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5"
+    "eslint-plugin-import": "^2.27.5",
+    "chai": "4.3.7",
+    "mocha": "10.2.0"
   },
   "engines": {
     "node": ">=16.0"
@@ -40,7 +40,6 @@
     "LICENSE",
     "Readme.md",
     "adts/index.js",
-    "adts/",
-    "test/"
+    "adts/"
   ]
 }
