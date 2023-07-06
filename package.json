@@ -1,25 +1,28 @@
 {
   "name": "adt-legacy-js",
   "version": "1.0.0",
-  "description": "",
+  "description": "Faster way to implement Auxiliary Data Types",
+  "author": "Sonu Kumar<sonu0774@gmail.com>",
+  "license": "Apache 2.0",
+  "contributors": [],
+  "repository": "sysrestart/adt-legacy-js",
+  "homepage": "https://sysrestart.com",
+  "keywords": [
+    "datastructure",
+    "dsalgo",
+    "javascriptdsalgo",
+    "javascriptds",
+    "nodejsds",
+    "queue",
+    "stack",
+    "linkedlist",
+    "binarysearchtree"
+  ],
   "main": "index.js",
   "scripts": {
     "tscheck": "tsc -p .",
     "test": "mocha --exit --extension .test.js --recursive"
   },
-  "lint-staged": {
-    "**/*.js": [
-      "eslint --fix",
-      "prettier-eslint --write"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && npm run tscheck"
-    }
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "chai": "4.3.7",
     "mocha": "10.2.0"
