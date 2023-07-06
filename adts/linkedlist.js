@@ -29,6 +29,7 @@ class LListClass {
         current.next = newNode;
         return true;
     }
+    
     // Display all the linkedlist node element and return an array of numbers
     /**
      * 

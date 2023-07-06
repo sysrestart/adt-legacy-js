@@ -71,6 +71,7 @@ class HashTableClass {
             }
         }
         this.table[pos]= value;
+        return true;
     }
     // Fetch Distro of Data
     /**
@@ -120,7 +121,9 @@ class HashTableClass {
         let hashPos = await this.hashValue(key);
         if(!!this.table[hashPos]) {
             this.table[hashPos] = undefined;
+            return true;
         }
+        return false;
     }
 
 }

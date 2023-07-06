@@ -46,6 +46,16 @@ class BSTClass {
         }
     }
     /**
+     * @returns {Promise<Boolean>}
+     */
+    async flush() {
+        this.root = null;
+        this.postOrderArr = [];
+        this.preOrderArr = [];
+        this.inOrderArr = [];
+        return true;
+    }
+    /**
      * 
      * @param {*} node 
      * @returns {Promise<Array>}
