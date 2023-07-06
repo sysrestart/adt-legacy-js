@@ -1,6 +1,6 @@
 {
   "name": "adt-legacy-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Faster way to implement Auxiliary Data Types",
   "author": "Sonu Kumar<sonu0774@gmail.com>",
   "license": "Apache 2.0",
@@ -40,6 +40,7 @@
     "LICENSE",
     "Readme.md",
     "adts/index.js",
-    "adts/"
+    "adts/",
+    "test/"
   ]
 }

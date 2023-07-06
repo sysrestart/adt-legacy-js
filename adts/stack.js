@@ -26,7 +26,7 @@ class StackClass {
     }
     // fetch stack items
     async fetch() {
-        return this.queueItems;
+        return this.items;
     }
     // clear stack
     async empty() {
